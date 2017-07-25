@@ -1,0 +1,4 @@
+#!/usr/bin/env nix-shell
+#!nix-shell -p cabal2nix
+#!nix-shell -i bash
+cabal2nix . >package.nix
