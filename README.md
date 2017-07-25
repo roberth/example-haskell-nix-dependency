@@ -1,4 +1,14 @@
-This demonstrates one way of including a dependency on a binary using Nix, without polluting `PATH`.
+This demonstrates one way of including a dependency on a binary using
+Nix, without polluting `PATH`.
+
+Please do also consider the **alternatives**. Hardcoding the
+dependency on installation might be a good idea, but not always. For
+example, NixOS links graphics driver modules at runtime. Another
+example where consistency at runtime is more important than
+determinism, is when your app is not the only user of a command. Using
+a **single globally installed version may well be a better approach**,
+because it using consistent versions may be critical to the workings
+of the command.
 
 # Demonstration
     
